@@ -6,7 +6,6 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import br.com.caelum.livraria.dao.AutorDao;
-import br.com.caelum.livraria.exception.LivrariaException;
 import br.com.caelum.livraria.modelo.Autor;
 
 @Stateless
@@ -17,7 +16,7 @@ public class AutorService {
 	
 	public void adiciona(Autor autor){
 		dao.salva(autor);		
-		throw new LivrariaException();
+		//throw new LivrariaException();
 	}
 
 	public List<Autor> todosAutores() {		
